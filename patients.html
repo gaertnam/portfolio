@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="images/icons8-heart-with-pulse-48.png">
+    <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>For Patients</title>
+  </head>
+  <body id="watercolor">
+    <div class="skip"><a href="#patients">Skip to Main Content</a></div>
+    <nav>
+        <ul>
+          <li><a href ="index.html">About</a></li>
+          <li><a href="nurses.html">For Nurses</a></li>
+          <li id="current"><a href="patients.html">For Patients</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    <main>
+        <header id="main">
+            <h1>Nurses Know</h1>
+            <h2>For patients that want more.</h2>
+        </header>
+        
+        <div class="textbox_other">
+          <h3 id = "patients">For Patients</h3>
+          <p>Select a provider below to read more about their skills and abilities as rated by the nurses who have worked side-by-side with them.</p>
+        </div>
+        
+        <div class="controls">
+          <button type="button" class="control" data-filter="all">All</button>
+          <button type="button" class="control" data-filter=".general">General Surgeons</button>
+          <button type="button" class="control" data-filter=".neurology">Neuro Surgeons</button>
+          <button type="button" class="control" data-filter=".orthopedic">Orthopedic Surgeons</button>
+          <button type="button" class="control" data-filter=".obgyn">OBGyn Surgeons</button>
+          <button type="button" class="control" data-filter=".ophthalmology">Ophthalmology Surgeons</button>
+          <!-- <button type="button" class="control" data-filter="none">None</button> -->
+  
+          <!-- <button type="button" class="control" data-sort="default:asc">Ascending Name</button>
+          <button type="button" class="control" data-sort="default:desc">Descending Name</button> -->
+        </div>
+        
+        <div class="physicians"> 
+          <img id="physician1" src="images/physician1.jpeg" alt="Doctor A" class="general mix"/>
+          <img id="physician2" src="images/physician2.jpeg" alt="Doctor B" class="general mix"/>
+          <img id="physician3" src="images/physician3.jpeg" alt="Doctor C" class="orthopedic mix"/>
+          <img id="physician4" src="images/physician4.jpeg" alt="Doctor D" class="obgyn mix"/>
+          <img id="physician5" src="images/physician5.jpeg" alt="Doctor E" class="obgyn mix"/>
+          <img id="physician6" src="images/physician6.jpeg" alt="Doctor F" class="orthopedic mix"/>
+          <img id="physician7" src="images/physician7.jpeg" alt="Doctor G" class="ophthomology mix"/>
+          <img id="physician8" src="images/physician8.jpeg" alt="Doctor H" class="orthopedic mix"/>
+          <img id="physician9" src="images/physician9.jpeg" alt="Doctor I" class="general mix"/>
+          <img id="physician10" src="images/physician10.jpeg" alt="Doctor J" class="neurology mix"/>
+          <img id="physician11" src="images/physician11.jpeg" alt="Doctor K" class="ophthalmology mix"/>
+          <img id="physician12" src="images/physician12.jpeg" alt="Doctor L" class="neurology mix"/>
+        </div>
+
+        <script src="dist/mixitup.min.js"></script>
+
+        <script>
+            var physicianFilter = document.querySelector('.physicians');
+
+            var mixer = mixitup(physicianFilter);
+        </script>
+
+      </main>
+    </main>
+      <footer>
+        <p>&copy;Nurses Know<br/>
+          Ashley Gaertner - University of Michigan</p>
+      </footer>
+    </body>
+  </html>
