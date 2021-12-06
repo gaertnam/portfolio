@@ -15,6 +15,11 @@
       gtag('js', new Date());
       gtag('config', 'G-KRJ1SWB6VS');
     </script> 
+    <script>
+      function myFunction() {
+        document.getElementById("contactform").reset();
+      }
+    </script>
   </head>
   <body id="watercolor">
     <div class="skip"><a href="#contactus">Skip to Main Content</a></div>
@@ -48,7 +53,7 @@
         </div>
         
         <div class="contact">
-          <form action="https://formspree.io/f/xrgjzbgw" method="POST">
+          <form action="https://formspree.io/f/xrgjzbgw" method="POST" id="contactform">
           
               <label for="fname">First Name</label>
               <input type="text" id="fname" name="firstname" placeholder="">
@@ -62,51 +67,50 @@
                 <option value="patient">Patient</option>
                 <option value="other">Other</option>
               </select>
-          
               <label for="comment">Comment</label>
               <textarea id="comment" name="comment" placeholder="Send Us Your Thoughts" style="height:100px"></textarea>
-          
               <input type="submit" value="Submit">
-          
+              <input type="button" onclick="myFunction()" value="Clear Form">
           </form>
         </div> 
-          <!-- 
-            <div class="contact-photos">
+
+          <!-- <div class="contact-photos">
             <img id="stethoscope-image" src="images/stethoscope.jpeg" alt="Heart Stethoscope"/>
             <img id="thank-you-image" src="images/thankyounurses.jpeg" alt="Thank You To Our Heroes"/>
             <img id="blocks-image" src="images/stacked_blokcs.jpeg" alt="Stacked Blocks with Healthcare Images"/>
           </div> -->
+
         <div class="contact-photos">
-          <div class="flip-card">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
+          <div class="flip-card" id="flip-card1">
+            <div class="flip-card-inner" id="flip-card-inner1">
+              <div class="flip-card-front" id="flip-card-front1">
                 <img id="stethoscope-image" src="images/stethoscope.jpeg" alt="Heart-Shaped Stethoscope" style="width:300px;height:200px;"/>
               </div>
-              <div class="flip-card-back" tabindex="0">
+              <div class="flip-card-back" id="flip-card-back1" tabindex="0">
                 <h4>Thank</h4>
               </div>
             </div>
           </div> 
-          <div class="flip-card">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
+          <div class="flip-card" id="flip-card2">
+            <div class="flip-card-inner" id="flip-card-inner2">
+              <div class="flip-card-front" id="flip-card-front2">
                 <img id="thank-you-image" src="images/thankyounurses.jpeg" alt="Thank You To Our Heroes" style="width:300px;height:200px;"/>
               </div>
-              <div class="flip-card-back" tabindex="0">
+              <div class="flip-card-back" id="flip-card-back2" tabindex="0">
                 <h4>You</h4>
               </div>
             </div>
           </div> 
-          <div class="flip-card">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
+          <div class="flip-card" id="flip-card3">
+            <div class="flip-card-inner" id="flip-card-inner3">
+              <div class="flip-card-front" id="flip-card-front3">
                 <img id="blocks-image" src="images/stacked_blokcs.jpeg" alt="Stacked Blocks with Healthcare Images" style="width:300px;height:200px;"/>
               </div>
-              <div class="flip-card-back" tabindex="0">
+              <div class="flip-card-back" id="flip-card-back3" tabindex="0">
                 <h4>Nurses!</h4>
               </div>
             </div>
-          </div> 
+          </div>
         </div>
     </main>
     <footer>

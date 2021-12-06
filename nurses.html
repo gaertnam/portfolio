@@ -15,6 +15,56 @@
       gtag('js', new Date());
       gtag('config', 'G-KRJ1SWB6VS');
     </script> 
+    <script>
+      function myFunction() {
+        document.getElementById("ratingform").reset();
+      }
+    </script>
+    <script>
+
+      function displayRadioValue() {
+      let section1 = document.querySelectorAll('.section-1 > input[type="radio"]')
+      let section2 = document.querySelectorAll('.section-2 > input[type="radio"]')
+      let section1Total = 0
+      let section2Total = 0
+      let section1Question = 0
+      let section2Question = 0
+      let result1 = ''
+      let result2 = ''
+    
+      //Section 1
+      section1.forEach(function(radio, index) {
+        if (radio.checked) {
+          section2Question++
+          section1Total += +radio.value
+        }
+      })
+    
+      //Section 2
+      section2.forEach(function(radio, index) {
+        if (radio.checked) {
+          section1Question++
+          section2Total += +radio.value
+        }
+      })
+    
+      //Section 1
+      result1 += "<b>Results for section 1:</b><br>"
+      result1 += "Total: " + section1Total + "<br>"
+      result1 += "Percentage: " + ((section1Total / (section2Question * 3)) * 100).toFixed(2) + "%"
+      let sect1 = encodeURIComponent(result1) //store data
+    
+      //Section 2
+      result2 += "<b>Results for section 2:</b><br>"
+      result2 += "Total: " + section2Total + "<br>"
+      result2 += "Percentage: " + ((section2Total / (section2Question * 3)) * 100).toFixed(2) + "%"
+      let sect2 = encodeURIComponent(result2) //store data
+    
+      //Redirect page
+      window.location.href = "doctor_a.html?section1="+sect1+"&section2="+sect2;
+      }
+    
+    </script>
   </head>
   <body id="watercolor">
     <div class="skip"><a href="#nurses">Skip to Main Content</a></div>
@@ -51,9 +101,9 @@
       </div>
 
         <div class="rate">
-          <form action="https://formspree.io/f/xyyogzwj" method="POST">
-            <label for="physician_name">Physician</label>
-            <select id="physician_name" name="physician_name">
+          <form action="https://formspree.io/f/xyyogzwj" method="POST" id="ratingform">
+            <label for="physician_name">Select a Physician</label>
+            <select id="physician_name" name="physician_name" placeholder="Select a Physician">
               <option value="doctor_a">Doctor A</option>
               <option value="doctor_b">Doctor B</option>
               <option value="doctor_c">Doctor C</option>
@@ -66,17 +116,16 @@
             </select>
           <fieldset>
             <legend>Choose the appropriate statement about this provider:</legend>
-            <input type="radio" id="high" name="high_rating" value="high">
+            <input type="radio" class=section1 id="high" name="high_rating" value="high">
             <label for="high">Would Highly Recommend</label><br>
-            <input type="radio" id="low" name="low_rating" value="low">
+            <input type="radio" class=section2 id="low" name="low_rating" value="low">
             <label for="low">Would Definitely Not Recommend</label><br>
           </fieldset>
           <br>
             <label for="addinfo">Additinal Information</label>
             <textarea id="addinfo" name="addinfo" placeholder="Tell Us More!" style="height:200px"></textarea>
-        
-            <input type="submit" value="Submit">
-        
+            <input type="submit" onclick="displayRadioValue()" value="Submit">
+            <input type="button" onclick="myFunction()" value="Clear Form">
           </form>
         </div> 
     </main>
