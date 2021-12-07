@@ -1,3 +1,5 @@
+// modified code found on https://jsfiddle.net/pjeb8uz1/
+
 var acountr = document.getElementById('acountr')
 var acountn = document.getElementById('acountn')
 var bcountr = document.getElementById('bcountr')

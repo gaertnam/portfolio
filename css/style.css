@@ -382,13 +382,13 @@ input[type=submit]:hover, input[type=button]:hover{
 }
 
 #flip div div {
-  color:white;
+  color: black;
 }
 #flip div:first-child div {
   color: black;
 }
 #flip div:last-child div {
-  color:white;
+  color:black;
 }
 
 @keyframes show {
