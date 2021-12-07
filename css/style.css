@@ -4,20 +4,10 @@ html{
 
 body {
   background-color: #44aec3;
-  /* font-family: 'Copperplate'; */
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin: 0;
   padding: 0;
 }
-
-/* #watercolor {
-  background-image: url("../images/watercolor_new.jpeg");
-  background-color: #35d3be;
-  height: 1000px;
-  background-position: center;
-  background-repeat: repeat;
-  background-size: cover;
-} */
 
 h1{
   font-size: 50px;
@@ -293,14 +283,41 @@ input[type=submit]:hover, input[type=button]:hover{
 
 .controls{
   margin: 0px 15px 15px 15px;
+  line-height: 2;
 }
 
-.contact, .rate {
+.contact/*, .rate*/ {
   display: block;
   border-radius: 5px;
   padding: 10px;
   border: solid black 2px;
   background-color: #7ce1ed;
+}
+
+.rate{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto auto;
+  row-gap: 15px;
+  /* column-gap: 5px; */
+  padding: 15px 15px;
+  /* border-radius: 5px;
+  border: solid black 2px; */
+  /* background-color: #7ce1ed; */
+  width: 60%;
+  /* justify-items: center;
+  align-items: center; */
+  margin: auto;
+}
+
+.dr-arate, .dr-brate, .dr-crate, .dr-drate, .dr-erate, .dr-frate, .dr-grate, .dr-hrate, .dr-irate, .dr-jrate, .dr-krate, .dr-lrate{
+  /* background-color: #7ce1ed; */
+  background-color:rgb(195, 250, 250);
+  border: black solid 2px;
+  text-align: center;
+  padding: 15px 15px;
+  line-height: 1.5;
+  
 }
 
 /* div.contact-photos {
@@ -448,6 +465,20 @@ img#instruments {
   transform: rotateY(180deg);
 } 
 
+.control{
+  font-size: 16px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /* font-weight: bold; */
+  padding: 5px 5px;
+  background-color: #ced3cd;
+  border: black solid 2px;
+}
+
+footer p{
+  background-color: black;
+  margin: 0px;
+}
+
 @media screen and (min-width: 1024px){
   nav{
     padding: 30px 0;
@@ -466,7 +497,7 @@ img#instruments {
   nav li{
     /* display: flex;
     flex-direction: column; */
-    width: 8%;
+    width: 10%;
     padding: 10px 10px 10px 10px;
     border-radius: 5px;
     background-color: white;
@@ -542,7 +573,7 @@ img#instruments {
     margin: 0px;
   }
 
-  div.contact, div.rate{
+  div.contact{
     margin: 25px 75px;
   }
 
@@ -630,11 +661,19 @@ img#instruments {
     padding: 5px;
   }
 
+  .rate {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto auto;
+    column-gap: 15px;
+    width: 80%;
+    margin: auto;
+  }
+
 }
 
 @media screen and (min-width: 1200px){
   body{
-    background-color: purple;
+    background-color: #29b5c8;
   }
 
   .grid{
@@ -693,8 +732,16 @@ img#instruments {
     margin: 0px 100px 20px 100px;
   }
 
-  div.contact, div.rate{
+  div.contact{
     margin: 25px 300px;
+  }
+
+  .rate {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    column-gap: 15px;
+    width: 80%;
+    margin: auto;
   }
 
   .controls{
