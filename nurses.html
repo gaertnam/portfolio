@@ -15,58 +15,13 @@
       gtag('js', new Date());
       gtag('config', 'G-KRJ1SWB6VS');
     </script> 
-    <script>
+    <!-- <script>
       function myFunction() {
         document.getElementById("ratingform").reset();
       }
-    </script>
-    <script>
-
-      function displayRadioValue() {
-      let section1 = document.querySelectorAll('.section-1 > input[type="radio"]')
-      let section2 = document.querySelectorAll('.section-2 > input[type="radio"]')
-      let section1Total = 0
-      let section2Total = 0
-      let section1Question = 0
-      let section2Question = 0
-      let result1 = ''
-      let result2 = ''
-    
-      //Section 1
-      section1.forEach(function(radio, index) {
-        if (radio.checked) {
-          section2Question++
-          section1Total += +radio.value
-        }
-      })
-    
-      //Section 2
-      section2.forEach(function(radio, index) {
-        if (radio.checked) {
-          section1Question++
-          section2Total += +radio.value
-        }
-      })
-    
-      //Section 1
-      result1 += "<b>Results for section 1:</b><br>"
-      result1 += "Total: " + section1Total + "<br>"
-      result1 += "Percentage: " + ((section1Total / (section2Question * 3)) * 100).toFixed(2) + "%"
-      let sect1 = encodeURIComponent(result1) //store data
-    
-      //Section 2
-      result2 += "<b>Results for section 2:</b><br>"
-      result2 += "Total: " + section2Total + "<br>"
-      result2 += "Percentage: " + ((section2Total / (section2Question * 3)) * 100).toFixed(2) + "%"
-      let sect2 = encodeURIComponent(result2) //store data
-    
-      //Redirect page
-      window.location.href = "doctor_a.html?section1="+sect1+"&section2="+sect2;
-      }
-    
-    </script>
+    </script> -->
   </head>
-  <body id="watercolor">
+  <body>
     <div class="skip"><a href="#nurses">Skip to Main Content</a></div>
     <nav>
         <ul>
@@ -100,7 +55,7 @@
           <br>
       </div>
 
-        <div class="rate">
+        <!-- <div class="rate">
           <form action="https://formspree.io/f/xyyogzwj" method="POST" id="ratingform">
             <label for="physician_name">Select a Physician</label>
             <select id="physician_name" name="physician_name" placeholder="Select a Physician">
@@ -127,8 +82,96 @@
             <input type="submit" onclick="displayRadioValue()" value="Submit">
             <input type="button" onclick="myFunction()" value="Clear Form">
           </form>
-        </div> 
-    </main>
+        </div>  -->
+        <div class=rate>
+          <div class=dr-arate>
+            Choose the statement most appropriate about Dr. A:<br>
+            <button onclick="countar()">I Would Highly Recommend</button>
+            <div id = 'acountr'></div>
+            <button onclick="countan()">I Would Defintely Not Recommend</button>
+            <div id = 'acountn'></div>
+          </div>
+          <div class=dr-brate>
+            Choose the statement most appropriate about Dr. B:<br>
+            <button onclick="countbr()">I Would Highly Recommend</button>
+            <div id = 'bcountr'></div>
+            <button onclick="countbn()">I Would Defintely Not Recommend</button>
+            <div id = 'bcountn'></div>
+          </div>
+          <div class=dr-crate>
+            Choose the statement most appropriate about Dr. C:<br>
+            <button onclick="countcr()">I Would Highly Recommend</button>
+            <div id = 'ccountr'></div>
+            <button onclick="countcn()">I Would Defintely Not Recommend</button>
+            <div id = 'ccountn'></div>
+          </div>
+          <div class=dr-drate>
+            Choose the statement most appropriate about Dr. D:<br>
+            <button onclick="countdr()">I Would Highly Recommend</button>
+            <div id = 'dcountr'></div>
+            <button onclick="countdn()">I Would Defintely Not Recommend</button>
+            <div id = 'dcountn'></div>
+          </div>
+          <div class=dr-erate>
+            Choose the statement most appropriate about Dr. E:<br>
+            <button onclick="counter()">I Would Highly Recommend</button>
+            <div id = 'ecountr'></div>
+            <button onclick="counten()">I Would Defintely Not Recommend</button>
+            <div id = 'ecountn'></div>
+          </div>
+          <div class=dr-frate>
+            Choose the statement most appropriate about Dr. F:<br>
+            <button onclick="countfr()">I Would Highly Recommend</button>
+            <div id = 'fcountr'></div>
+            <button onclick="countfn()">I Would Defintely Not Recommend</button>
+            <div id = 'fcountn'></div>
+          </div>
+          <div class=dr-grate>
+            Choose the statement most appropriate about Dr. G:<br>
+            <button onclick="countgr()">I Would Highly Recommend</button>
+            <div id = 'gcountr'></div>
+            <button onclick="countgn()">I Would Defintely Not Recommend</button>
+            <div id = 'gcountn'></div>
+          </div>
+          <div class=dr-hrate>
+            Choose the statement most appropriate about Dr. H:<br>
+            <button onclick="counthr()">I Would Highly Recommend</button>
+            <div id = 'hcountr'></div>
+            <button onclick="counthn()">I Would Defintely Not Recommend</button>
+            <div id = 'hcountn'></div>
+          </div>
+          <div class=dr-irate>
+            Choose the statement most appropriate about Dr. I:<br>
+            <button onclick="countir()">I Would Highly Recommend</button>
+            <div id = 'icountr'></div>
+            <button onclick="countin()">I Would Defintely Not Recommend</button>
+            <div id = 'icountn'></div>
+          </div>
+          <div class=dr-jrate>
+            Choose the statement most appropriate about Dr. J:<br>
+            <button onclick="countjr()">I Would Highly Recommend</button>
+            <div id = 'jcountr'></div>
+            <button onclick="countjn()">I Would Defintely Not Recommend</button>
+            <div id = 'jcountn'></div>
+          </div>
+          <div class=dr-krate>
+            Choose the statement most appropriate about Dr. K:<br>
+            <button onclick="countkr()">I Would Highly Recommend</button>
+            <div id = 'kcountr'></div>
+            <button onclick="countkn()">I Would Defintely Not Recommend</button>
+            <div id = 'kcountn'></div>
+          </div>
+          <div class=dr-lrate>
+            Choose the statement most appropriate about Dr. L:<br>
+            <button onclick="countlr()">I Would Highly Recommend</button>
+            <div id = 'lcountr'></div>
+            <button onclick="countln()">I Would Defintely Not Recommend</button>
+            <div id = 'lcountn'></div>
+          </div>
+        </div>
+    
+      </main>
+      <script src="js/ratings.js"></script>
     <footer>
       <p>&copy;Nurses Know<br/>
         Ashley Gaertner - University of Michigan</p>
